@@ -1,4 +1,4 @@
-﻿"""
+"""
 Main Streamlit application entry point.
 Handles multi-page routing with simple 12-page structure.
 """
@@ -27,7 +27,7 @@ st.set_page_config(
     menu_items={
         "Get Help": "https://github.com/your-repo/issues",
         "Report a bug": "https://github.com/your-repo/issues",
-        "About": f"{PAGE_TITLE} v1.0 - Phase 1"
+        "About": f"{PAGE_TITLE} v3.0 - Phase 5"
     }
 )
 
@@ -182,39 +182,11 @@ with st.sidebar:
     <div style='text-align: center; padding: 1.5rem 0;'>
         <h1 style='font-size: 2.5rem; border: none; margin: 0; color: #FFFFFF;'>🛡️</h1>
         <h2 style='font-size: 1.1rem; margin: 0.5rem 0; color: #FFFFFF; border: none; padding: 0;'>PPE Platform</h2>
-        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v1.0 | Phase 1</p>
+        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v1.0 | Phase 5</p>
     </div>
     """, unsafe_allow_html=True)
     
-    st.markdown("---")
     
-    st.markdown("""
-    <h3 style='color: #FFFFFF; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.05em;'>📖 MAIN NAVIGATION</h3>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
-    - **1️⃣ 🏠 Home** - Dashboard & Overview
-    - **2️⃣ 📊 Dashboard** - Analytics & Metrics
-    - **3️⃣ 📷 Detection** - PPE Detection Interface
-    - **4️⃣ 🏢 Organizations** - Team Management
-    - **5️⃣ 🔐 Account** - Login & Register
-    - **6️⃣ ⚙️ Settings** - User Preferences
-    """)
-    
-    st.markdown("---")
-    
-    st.markdown("""
-    <h3 style='color: #FFFFFF; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.05em;'>🔐 AUTHENTICATION</h3>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
-    - **7️⃣ 📧 Verify Email** - Email Verification
-    - **8️⃣ 🔑 Reset Password** - Change Password
-    - **9️⃣ 🔑 Forgot Password** - Request Reset
-    - **🔟 🔐 2FA Setup** - Enable 2FA
-    - **1️⃣1️⃣ 🔐 2FA Login** - Verify 2FA
-    - **1️⃣2️⃣ 📋 Activity Logs** - Security History
-    """)
     
     st.markdown("---")
     
@@ -230,7 +202,6 @@ with st.sidebar:
         "- Multi-tenant support\n"
         "- Advanced analytics\n"
         "- Secure authentication\n\n"
-        "📧 **Support:** jwalpatel.1981@gmail.com"
     )
 
 # ============================================================================
@@ -242,7 +213,7 @@ st.markdown("""
 <div style='text-align: center; color: #999; font-size: 0.8rem; padding: 2rem 0; border-top: 1px solid #eee;'>
     <p style='margin: 0.5rem 0;'>🛡️ <strong>PPE Detection & Compliance Platform</strong></p>
     <p style='margin: 0.5rem 0;'>Powered by YOLOv11 | Built with Streamlit & SQLAlchemy</p>
-    <p style='margin: 0.5rem 0;'>© 2024 | Phase 1: Authentication & Detection</p>
+    <p style='margin: 0.5rem 0;'>© 2024 | Phase 5: Live Detection and Security</p>
     <p style='margin: 0.5rem 0;'>🎯 <strong>12-Page Architecture</strong> • Modular Design</p>
 </div>
 """, unsafe_allow_html=True)
