@@ -182,7 +182,7 @@ with st.sidebar:
     <div style='text-align: center; padding: 1.5rem 0;'>
         <h1 style='font-size: 2.5rem; border: none; margin: 0; color: #FFFFFF;'>🛡️</h1>
         <h2 style='font-size: 1.1rem; margin: 0.5rem 0; color: #FFFFFF; border: none; padding: 0;'>PPE Platform</h2>
-        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v1.0 | Phase 5</p>
+        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v3.0 | Phase 5</p>
     </div>
     """, unsafe_allow_html=True)
     
