@@ -1,4 +1,4 @@
-﻿"""
+"""
 Home page (1_🏠_Home.py) - Landing page with login redirect and welcome dashboard.
 Displays different content based on authentication status.
 """
@@ -187,7 +187,7 @@ if not is_authenticated():
         <div class='feature-card'>
             <div class='feature-icon'>🎯</div>
             <h3>Real-time Detection</h3>
-            <p>Instant PPE identification with 99% accuracy using YOLOv11</p>
+            <p>Instant PPE identification with 85+% accuracy using YOLOv11</p>
         </div>
         """, unsafe_allow_html=True)
     
