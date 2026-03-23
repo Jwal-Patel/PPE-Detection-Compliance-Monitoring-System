@@ -1,0 +1,50 @@
+# IDE and Editor
+.vs/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+logs/
+*.log
+
+# Models (optional - only if too large)
+# *.pt
+#*.pth
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db

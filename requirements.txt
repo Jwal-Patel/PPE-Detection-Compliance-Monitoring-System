@@ -1,0 +1,200 @@
+# =============================================================================
+# PPE DETECTION & COMPLIANCE PLATFORM - COMPLETE DEPENDENCIES
+# =============================================================================
+# Install: pip install -r requirements.txt
+# Python 3.9+ required (3.11+ recommended)
+# Last Updated: February 2026
+
+# =============================================================================
+# CORE WEB FRAMEWORK
+# =============================================================================
+
+streamlit>=1.28.0                    # UI framework for web app
+streamlit-option-menu>=0.3.6         # Enhanced menu navigation (optional, for sidebar enhancement)
+
+# =============================================================================
+# DATABASE & ORM
+# =============================================================================
+
+sqlalchemy>=2.0.0                    # SQL ORM for database abstraction
+# Note: SQLite is bundled with Python, no additional install needed
+
+# =============================================================================
+# MACHINE LEARNING & COMPUTER VISION
+# =============================================================================
+
+# Deep Learning Framework
+torch>=2.0.0                         # PyTorch - deep learning framework
+torchvision>=0.15.0                  # Computer vision utilities & pre-trained models
+
+# Object Detection
+ultralytics>=8.3.0                   # YOLOv8/YOLOv11 models & training framework
+
+# Image & Video Processing
+opencv-python>=4.8.0                 # Computer vision library (image/video processing)
+Pillow>=10.0.0                       # Image processing library
+
+# Data Processing & Numerical Computing
+numpy>=1.24.0                        # Numerical computing
+pandas>=2.0.0                        # Data manipulation & analysis
+
+# =============================================================================
+# AUTHENTICATION & SECURITY (PHASE 2)
+# =============================================================================
+
+# Password Hashing
+bcrypt>=4.0.0                        # Secure password hashing (bcrypt algorithm)
+
+# Two-Factor Authentication (TOTP)
+pyotp>=2.9.0                         # TOTP implementation (Google Authenticator compatible)
+qrcode>=7.4.0                        # QR code generation for 2FA setup
+
+# Email & Validation
+email-validator>=2.0.0               # Email address validation & normalization
+
+# =============================================================================
+# CONFIGURATION & ENVIRONMENT
+# =============================================================================
+
+python-dotenv>=1.0.0                 # Environment variables management (.env file support)
+pyyaml>=6.0                          # YAML configuration parsing
+
+# =============================================================================
+# DATA VISUALIZATION
+# =============================================================================
+
+altair>=5.0.0                        # Interactive Vega-Lite charts for Streamlit
+matplotlib>=3.7.0                    # Static plotting library
+
+# =============================================================================
+# HTTP & NETWORKING
+# =============================================================================
+
+requests>=2.31.0                     # HTTP library for API calls
+
+# =============================================================================
+# REPORTING & EXPORT (PHASE 4)
+# =============================================================================
+
+# Excel Generation
+openpyxl>=3.1.0                      # Excel file (xlsx) creation & manipulation
+
+# PDF Generation
+reportlab>=4.0.0                     # PDF report generation
+
+# =============================================================================
+# LOGGING & DEBUGGING
+# =============================================================================
+
+# Note: Python's built-in logging module is used
+# Optional: python-json-logger>=2.0.0 for JSON logging (if needed)
+
+# =============================================================================
+# OPTIONAL FUTURE PHASES (commented out - uncomment as needed)
+# =============================================================================
+
+# Phase 5: Cloud Deployment
+# boto3>=1.26.0                       # AWS SDK for cloud storage
+# google-cloud-storage>=2.10.0        # Google Cloud Storage
+
+# Phase 4: Advanced Email Services
+# sendgrid>=6.10.0                    # SendGrid email service
+# mailgun-py>=1.1.9                   # Mailgun email service
+
+# Phase 3+: Additional Image Processing
+# scikit-image>=0.21.0                # Scientific image processing
+# Pillow-SIMD>=9.0.0                  # Accelerated image processing (optional)
+
+# =============================================================================
+# DEVELOPMENT DEPENDENCIES (optional - for development only)
+# =============================================================================
+
+# Uncomment the following for development:
+# pytest>=7.0.0                       # Testing framework
+# pytest-cov>=4.0.0                   # Test coverage reporting
+# black>=23.0.0                       # Code formatter
+# flake8>=6.0.0                       # Code linter
+# mypy>=1.0.0                         # Static type checker
+
+# =============================================================================
+# VERSION CONSTRAINTS NOTES
+# =============================================================================
+# 
+# IMPORTANT VERSION INFORMATION:
+# 
+# 1. PyTorch (torch) - Version 2.0+
+#    - First stable CUDA 12 support
+#    - Recommended for M1/M2 Mac: torch>=2.0.0,<3.0.0
+#    - For GPU: Ensure CUDA Toolkit 12.x installed separately
+#
+# 2. YOLOv11 (ultralytics>=8.3.0)
+#    - YOLOv11 released Dec 2024
+#    - Requires torch>=2.0.0
+#    - Auto-downloads model weights on first use (~100MB per model)
+#
+# 3. OpenCV (opencv-python>=4.8.0)
+#    - Pure Python version (no system dependencies)
+#    - For GPU acceleration: opencv-python[cuda] (requires CUDA installed)
+#
+# 4. SQLAlchemy (>=2.0.0)
+#    - Breaking changes from 1.x - ensure compatibility
+#    - SQLite3 bundled with Python (3.9+)
+#
+# 5. Streamlit (>=1.28.0)
+#    - Auto-reloads on code changes
+#    - Run with: streamlit run app.py
+#
+# 6. Python Compatibility
+#    - Minimum: Python 3.9
+#    - Recommended: Python 3.11 or 3.12
+#    - Not compatible: Python 3.8 (EOL) or earlier
+#
+# =============================================================================
+
+# =============================================================================
+# INSTALLATION INSTRUCTIONS
+# =============================================================================
+#
+# 1. Create Virtual Environment:
+#    python -m venv venv
+#    source venv/bin/activate          # Linux/Mac
+#    venv\Scripts\activate             # Windows
+#
+# 2. Upgrade pip:
+#    pip install --upgrade pip
+#
+# 3. Install Requirements:
+#    pip install -r requirements.txt
+#
+# 4. (Optional) GPU Support:
+#    # For NVIDIA GPU (CUDA 12.x):
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+# 5. Run Application:
+#    streamlit run app.py
+#
+# 6. Access App:
+#    Open browser to http://localhost:8501
+#
+# =============================================================================
+
+# =============================================================================
+# TROUBLESHOOTING
+# =============================================================================
+#
+# Issue: "ModuleNotFoundError: No module named 'torch'"
+# Solution: pip install torch torchvision
+#
+# Issue: "CUDA out of memory" errors
+# Solution: Use CPU mode or reduce batch size in train.py
+#
+# Issue: OpenCV on headless servers
+# Solution: pip install opencv-python-headless (instead of opencv-python)
+#
+# Issue: PDF generation fails (reportlab)
+# Solution: Ensure reportlab is installed: pip install reportlab
+#
+# Issue: Permission denied on .env file
+# Solution: chmod 600 .env (Linux/Mac) or update file permissions
+#
+# =============================================================================

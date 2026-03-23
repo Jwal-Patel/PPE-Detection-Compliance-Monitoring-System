@@ -1,0 +1,25 @@
+# Dataset root path (REQUIRED by YOLOv11)
+path: Dataset
+
+# Relative paths from the root path above
+train: train/images
+val: valid/images
+test: test/images
+
+# Number of classes
+nc: 5
+
+# Class names (in order of class IDs 0-4)
+names:
+  0: boots
+  1: gloves
+  2: helmet
+  3: human
+  4: vest
+
+roboflow:
+  workspace: hx-hezqh
+  project: ppe-detection-yfmym
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/hx-hezqh/ppe-detection-yfmym/dataset/1

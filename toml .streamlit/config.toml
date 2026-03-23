@@ -1,0 +1,28 @@
+[theme]
+primaryColor = "#667eea"
+backgroundColor = "#f9fafb"
+secondaryBackgroundColor = "#f3f4f6"
+textColor = "#1f2937"
+font = "sans serif"
+
+[client]
+showErrorDetails = true
+toolbarMode = "viewer"
+pageIconsColor = "#667eea"
+# Hide the app name from pages sidebar
+pageAnchorRunStaticCode = true
+
+[logger]
+level = "info"
+
+[server]
+port = 8501
+headless = false
+runOnSave = true
+maxUploadSize = 200
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+magicEnabled = true
