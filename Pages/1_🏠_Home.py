@@ -252,7 +252,7 @@ if not is_authenticated():
     with col1:
         st.markdown("""
         <div class='stat-card'>
-            <div class='stat-number'>99%</div>
+            <div class='stat-number'>85%+</div>
             <div class='stat-label'>Detection Accuracy</div>
         </div>
         """, unsafe_allow_html=True)
