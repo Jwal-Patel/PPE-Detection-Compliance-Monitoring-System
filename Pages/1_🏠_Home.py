@@ -261,7 +261,7 @@ if not is_authenticated():
         st.markdown("""
         <div class='stat-card'>
             <div class='stat-number'>5</div>
-            <div class='stat-label'>PPE Classes</div>
+            <div class='stat-label'>Classes</div>
         </div>
         """, unsafe_allow_html=True)
     
