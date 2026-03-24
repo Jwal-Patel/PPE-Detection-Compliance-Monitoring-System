@@ -1,35 +1,19 @@
 """
 Main Streamlit application entry point.
-Handles multi-page routing with 12-page structure.
+Handles multi-page routing with simple 12-page structure.
 """
 
 import streamlit as st
+from pathlib import Path
 
-# Import configuration safely
-try:
-    from utils.config import (
-        PAGE_ICON,
-        PAGE_TITLE,
-        LAYOUT,
-        INITIAL_SIDEBAR_STATE,
-    )
-except ImportError as e:
-    # Fallback values if import fails
-    PAGE_ICON = "🛡️"
-    PAGE_TITLE = "PPE Detection & Compliance Platform"
-    LAYOUT = "wide"
-    INITIAL_SIDEBAR_STATE = "expanded"
-
-# Import auth utilities
-try:
-    from Auth.auth import init_session_state
-    from Auth.db import init_db
-except ImportError:
-    # Provide mock functions if imports fail
-    def init_session_state():
-        pass
-    def init_db():
-        pass
+from Auth.auth import init_session_state
+from Auth.db import init_db
+from utils.config import (
+    PAGE_ICON,
+    PAGE_TITLE,
+    LAYOUT,
+    INITIAL_SIDEBAR_STATE,
+)
 
 # ============================================================================
 # PAGE CONFIGURATION
@@ -41,9 +25,9 @@ st.set_page_config(
     layout=LAYOUT,
     initial_sidebar_state=INITIAL_SIDEBAR_STATE,
     menu_items={
-        "Get Help": "https://github.com/Jwal-Patel/PPE-Detection-Compliance-Monitoring-System/issues",
-        "Report a bug": "https://github.com/Jwal-Patel/PPE-Detection-Compliance-Monitoring-System/issues",
-        "About": f"{PAGE_TITLE} v1.0"
+        "Get Help": "https://github.com/your-repo/issues",
+        "Report a bug": "https://github.com/your-repo/issues",
+        "About": f"{PAGE_TITLE} v3.0 - Phase 5"
     }
 )
 
@@ -163,6 +147,10 @@ st.markdown("""
         border-left: 4px solid;
     }
     
+    .sidebar .sidebar-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
     .stDataFrame {
         border-radius: 0.75rem;
         overflow: hidden;
@@ -186,7 +174,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ============================================================================
-# SIDEBAR NAVIGATION
+# ENHANCED SIDEBAR - CLEAN 12-PAGE NAVIGATION
 # ============================================================================
 
 with st.sidebar:
@@ -194,52 +182,38 @@ with st.sidebar:
     <div style='text-align: center; padding: 1.5rem 0;'>
         <h1 style='font-size: 2.5rem; border: none; margin: 0; color: #FFFFFF;'>🛡️</h1>
         <h2 style='font-size: 1.1rem; margin: 0.5rem 0; color: #FFFFFF; border: none; padding: 0;'>PPE Platform</h2>
-        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v1.0</p>
+        <p style='color: #FFFFFF; font-size: 0.8rem; margin: 0.5rem 0 0 0;'>v3.0 | Phase 5</p>
     </div>
     """, unsafe_allow_html=True)
     
-    st.markdown("---")
     
-    st.markdown("""<h3 style='color: #FFFFFF; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;'>📍 NAVIGATION</h3>""", unsafe_allow_html=True)
-    
-    if st.button("🏠 Home", use_container_width=True):
-        st.switch_page("pages/1_🏠_Home.py")
-    
-    if st.button("📊 Dashboard", use_container_width=True):
-        st.switch_page("pages/2_📊_Dashboard.py")
-    
-    if st.button("📷 Detection", use_container_width=True):
-        st.switch_page("pages/3_📷_Detection.py")
-    
-    if st.button("🏢 Organizations", use_container_width=True):
-        st.switch_page("pages/4_🏢_Organizations.py")
-    
-    if st.button("🔐 Account", use_container_width=True):
-        st.switch_page("pages/5_🔐_Account.py")
     
     st.markdown("---")
     
-    with st.expander("ℹ️ About", expanded=False):
-        st.markdown("""
-        **PPE Detection & Compliance Platform**
-        
-        Enterprise-grade safety monitoring using YOLOv11 AI.
-        
-        **Features:**
-        - Real-time PPE detection
-        - Multi-tenant support
-        - Advanced analytics
-        - Secure authentication
-        """)
+    st.markdown("""
+    <h3 style='color: #FFFFFF; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.05em;'>ℹ️ ABOUT</h3>
+    """, unsafe_allow_html=True)
+    
+    st.info(
+        "**PPE Detection & Compliance Platform**\n\n"
+        "Enterprise-grade safety monitoring system using YOLOv11 AI.\n\n"
+        "**Features:**\n"
+        "- Real-time PPE detection\n"
+        "- Multi-tenant support\n"
+        "- Advanced analytics\n"
+        "- Secure authentication\n\n"
+    )
 
 # ============================================================================
-# MAIN CONTENT
+# MAIN APP FOOTER
 # ============================================================================
 
+st.markdown("---")
 st.markdown("""
-<div style='text-align: center; color: #999; font-size: 0.8rem; padding: 3rem 0;'>
+<div style='text-align: center; color: #999; font-size: 0.8rem; padding: 2rem 0; border-top: 1px solid #eee;'>
     <p style='margin: 0.5rem 0;'>🛡️ <strong>PPE Detection & Compliance Platform</strong></p>
-    <p style='margin: 0.5rem 0;'>Powered by YOLOv11 | Built with Streamlit</p>
-    <p style='margin: 0.5rem 0;'>© 2024 | Phase 5</p>
+    <p style='margin: 0.5rem 0;'>Powered by YOLOv11 | Built with Streamlit & SQLAlchemy</p>
+    <p style='margin: 0.5rem 0;'>© 2024 | Phase 5: Live Detection and Monitoring</p>
+    <p style='margin: 0.5rem 0;'>🎯 <strong>12-Page Architecture</strong> • Modular Design</p>
 </div>
 """, unsafe_allow_html=True)
