@@ -564,14 +564,14 @@ For commercial use: [your-email@example.com]
 
 ##  Contact
 
-**Author**: [Your Name]  
-**Email**: [your-email@example.com]  
-**GitHub**: [@yourprofile](https://github.com/yourprofile)
+**Author**: Jwal Patel    
+**Email**: [jwalpatel.1981@gmail.com]  
+**GitHub**: [@Jwal-Patel]((https://github.com/Jwal-Patel))
 
 ---
 
-**Last Updated**: December 20, 2024  
-**Version**: 2.0.0  
+**Last Updated**: March 11, 2026  
+**Version**: 3.0.0  
 **Status**: Production Ready
 
 ---
@@ -579,9 +579,9 @@ For commercial use: [your-email@example.com]
 ##  Get Started!
 
 ```bash
-streamlit run app.py
+1. Download the repo.
+2. Extract the files in the folder.
+3. Double-click on the "Run app.bat", wait for it to install the necessary libraries and then the app will open automatically in your browser.
 ```
 
 **Happy detecting! **
-
-
