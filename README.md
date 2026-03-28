@@ -1,4 +1,4 @@
-# ??? PPE Detection & Compliance Platform
+# PPE Detection & Compliance Platform
 
 > **Enterprise-grade AI-powered Personal Protective Equipment Detection & Safety Compliance Monitoring System**
 
@@ -9,7 +9,7 @@
 
 ---
 
-## ?? Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -31,75 +31,75 @@
 
 ---
 
-## ?? Overview
+## Overview
 
 **PPE Detection & Compliance Platform** is a comprehensive, enterprise-ready solution for real-time monitoring and enforcement of personal protective equipment (PPE) compliance in workplaces. Using cutting-edge YOLOv11 artificial intelligence, the platform provides instant detection of safety equipment including helmets, vests, boots, and gloves across multiple input sources (images, videos, live webcams, and RTSP streams).
 
-### ?? Platform Phases
+### Platform Phases
 
 | Phase | Scope | Status |
 |-------|-------|--------|
-| **Phase 1** | Authentication, Organization Management, Basic Detection | ? Complete |
-| **Phase 2** | Email Verification, Password Reset, 2FA, Activity Logging | ? Complete |
-| **Phase 3** | Video & Webcam Streaming, Real-time Processing | ? Complete |
-| **Phase 4** | Advanced Analytics, Report Generation, Dashboard | ? Complete |
+| **Phase 1** | Authentication, Organization Management, Basic Detection |  Complete |
+| **Phase 2** | Email Verification, Password Reset, 2FA, Activity Logging |  Complete |
+| **Phase 3** | Video & Webcam Streaming, Real-time Processing |  Complete |
+| **Phase 4** | Advanced Analytics, Report Generation, Dashboard |  Complete |
 
 ---
 
-## ? Key Features
+## Key Features
 
-### 1. ?? Real-Time PPE Detection
+### 1.  Real-Time PPE Detection
 - **Multi-Input Support**: Images, uploaded videos, local webcams, and RTSP/MJPEG streams
 - **High Accuracy**: 99%+ detection accuracy using YOLOv11 neural networks
 - **Live Streaming**: Real-time processing from IP cameras and CCTV systems
 - **Fast Processing**: Frame-by-frame detection with optimized inference
 
-### 2. ?? Multi-Tenant Organization Management
-- **Hierarchical Structure**: Organizations ? Workstations ? Detection Logs
+### 2. Multi-Tenant Organization Management
+- **Hierarchical Structure**: Organizations  Workstations  Detection Logs
 - **Role-Based Access Control**: Admin, Supervisor, Viewer roles
 - **Team Collaboration**: Add/remove members, assign roles, manage permissions
 - **Workstation Configuration**: Multiple detection points per organization with RTSP camera URLs
 
-### 3. ?? Enterprise Authentication & Security
+### 3. Enterprise Authentication & Security
 - **Email Verification**: Mandatory account activation via email
 - **Password Reset**: Secure token-based password recovery (1-hour expiry)
 - **Two-Factor Authentication (2FA)**: TOTP-based verification with backup codes
 - **Account Lockout**: Auto-lock after 5 failed login attempts (1-hour duration)
 - **Session Management**: Secure session tracking with automatic cleanup
 
-### 4. ?? Compliance Analysis & Classification
+### 4. Compliance Analysis & Classification
 - **Instant Classification**: Real-time compliance status (Green/Yellow/Red)
 - **Compliance Rules**:
-  - ?? **GREEN**: All required PPE items detected (Helmet, Vest, Boots)
-  - ?? **YELLOW**: Partial PPE compliance (1-2 items)
-  - ?? **RED**: Non-compliant (0 items detected)
+  -  **GREEN**: All required PPE items detected (Helmet, Vest, Boots)
+  -  **YELLOW**: Partial PPE compliance (1-2 items)
+  -  **RED**: Non-compliant (0 items detected)
 - **Worker Tracking**: Unique worker identification across frame sequences
 - **PPE Breakdown**: Detailed detection of each safety item
 
-### 5. ?? Advanced Analytics Dashboard
+### 5. Advanced Analytics Dashboard
 - **Real-Time Metrics**: Live compliance rates, worker counts, status distribution
 - **Historical Trends**: Compliance tracking over time (7/30/90 days)
 - **PPE Statistics**: Item detection frequency and distribution
 - **Auto-Refresh**: 60-second cache with manual refresh options
 
-### 6. ?? Multi-Format Report Generation
+### 6. Multi-Format Report Generation
 - **CSV Export**: Spreadsheet-compatible compliance data
 - **JSON Export**: API-friendly structured data
 - **PDF Reports**: Professional compliance reports with charts and statistics
 
-### 7. ?? Comprehensive Logging & Auditing
+### 7. Comprehensive Logging & Auditing
 - **Activity Logs**: User login/logout, password changes, 2FA events
 - **Audit Logs**: Organization changes, member management, workstation updates
 - **Detection Logs**: Timestamped PPE detection results with raw data
 
-### 8. ?? Video & Streaming Support
+### 8. Video & Streaming Support
 - **Local Webcam**: Direct webcam access (camera index: 0)
 - **RTSP Streams**: IP camera streams (e.g., `rtsp://192.168.1.100:554/stream`)
 - **MJPEG URLs**: HTTP-based camera streams
 - **Video Files**: MP4, AVI, MOV, MKV format support
 - **Frame Control**: Skip frames for performance optimization
 
-### 9. ?? Settings & Customization
+### 9. Settings & Customization
 - **Language & Region**: Timezone and locale configuration
 - **Detection Parameters**: Adjustable confidence threshold (0.1-1.0)
 - **IoU Threshold**: Intersection over Union tuning (0.1-0.9)
@@ -108,7 +108,7 @@
 
 ---
 
-## ?? Safety & Security Features
+## Safety & Security Features
 
 ### Authentication Security
 
@@ -135,7 +135,7 @@
 - **Algorithm**: HMAC-SHA1 with 30-second time window
 - **Authenticator Apps**: Google Authenticator, Authy, Microsoft Authenticator
 - **Backup Codes**: 10 single-use recovery codes (format: XXXX-XXXX-XXXX)
-- **Verification Window**: ±1 time step for clock skew tolerance
+- **Verification Window**: Â±1 time step for clock skew tolerance
 
 #### 4. **Password Reset Security**
 - Token Generation: 32-byte cryptographically secure random tokens
@@ -185,7 +185,7 @@
 - Member invited/removed
 - Member role changes
 - Workstation created/updated/deleted
-- Changes tracked (old ? new values)
+- Changes tracked (old  new values)
 
 #### 3. **Detection Data Integrity**
 - Frame timestamp, Worker count, Compliance status
@@ -194,7 +194,7 @@
 
 ---
 
-## ?? Tech Stack
+##  Tech Stack
 
 ### Backend & Framework
 | Component | Technology | Version | Purpose |
@@ -233,53 +233,53 @@
 
 ---
 
-## ?? Project Structure
+##  Project Structure
 
 ```
 PPE-Detection-Model/
-??? ?? app.py                  # Main Streamlit entry point
-??? ?? train.py                # YOLOv11 model training script
-??? ?? requirements.txt         # Python dependencies
-??? ?? data.yaml               # YOLOv11 dataset configuration
-??? ?? README.md               # Documentation
-??? ?? Auth/                   # Authentication & Security
-?   ??? auth.py               # High-level authentication logic
-?   ??? db.py                 # Database CRUD operations
-?   ??? models.py             # SQLAlchemy ORM models
-?   ??? security.py           # Password hashing & tokens
-?   ??? email_service.py      # SMTP email sending
-?   ??? totp.py               # 2FA/TOTP implementation
-??? ?? Pages/                  # Streamlit Multi-Page Application
-?   ??? 1_??_Home.py          # Landing page
-?   ??? 2_??_Dashboard.py     # Analytics & metrics
-?   ??? 3_??_Detection.py     # PPE detection interface
-?   ??? 4_??_Organizations.py # Organization management
-?   ??? 5_??_Account.py       # Login & registration
-?   ??? 6_??_Settings.py      # User preferences
-?   ??? 7_??_Verify_Email.py  # Email verification
-?   ??? 8_??_Reset_Password.py# Password reset
-?   ??? 9_??_Forgot_Password.py# Password recovery
-?   ??? 10_??_2FA_Setup.py    # 2FA setup
-?   ??? 11_??_2FA_Login.py    # 2FA verification
-?   ??? 12_??_Activity_Logs.py# Activity history
-??? ?? utils/                  # Core Utilities & Logic
-?   ??? config.py             # Configuration & constants
-?   ??? detection.py          # YOLOv11 detection
-?   ??? compliance.py         # Compliance classification
-?   ??? visualization.py      # Visualization utilities
-?   ??? video_processing.py   # Video/webcam processing
-?   ??? realtime_detection.py # Real-time service
-?   ??? analytics.py          # Analytics calculations
-?   ??? report_generator.py   # Report generation
-??? ?? Dataset/               # Training Dataset
-??? ?? models/                # Pre-trained Models
-??? ?? logs/                  # Application Logs
-??? ??? database/              # Local Database
+  app.py                  # Main Streamlit entry point
+  train.py                # YOLOv11 model training script
+  requirements.txt         # Python dependencies
+  data.yaml               # YOLOv11 dataset configuration
+  README.md               # Documentation
+  Auth/                   # Authentication & Security
+    auth.py               # High-level authentication logic
+    db.py                 # Database CRUD operations
+    models.py             # SQLAlchemy ORM models
+    security.py           # Password hashing & tokens
+    email_service.py      # SMTP email sending
+    totp.py               # 2FA/TOTP implementation
+  Pages/                  # Streamlit Multi-Page Application
+    1__Home.py          # Landing page
+    2__Dashboard.py     # Analytics & metrics
+    3__Detection.py     # PPE detection interface
+    4__Organizations.py # Organization management
+    5__Account.py       # Login & registration
+    6__Settings.py      # User preferences
+    7__Verify_Email.py  # Email verification
+    8__Reset_Password.py# Password reset
+    9__Forgot_Password.py# Password recovery
+    10__2FA_Setup.py    # 2FA setup
+    11__2FA_Login.py    # 2FA verification
+    12__Activity_Logs.py# Activity history
+  utils/                  # Core Utilities & Logic
+    config.py             # Configuration & constants
+    detection.py          # YOLOv11 detection
+    compliance.py         # Compliance classification
+    visualization.py      # Visualization utilities
+    video_processing.py   # Video/webcam processing
+    realtime_detection.py # Real-time service
+    analytics.py          # Analytics calculations
+    report_generator.py   # Report generation
+  Dataset/               # Training Dataset
+  models/                # Pre-trained Models
+  logs/                  # Application Logs
+  database/              # Local Database
 ```
 
 ---
 
-## ?? Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.9 or higher
@@ -314,40 +314,40 @@ Visit `http://localhost:8501` to access the application.
 
 ---
 
-## ?? Quick Start
+##  Quick Start
 
 ### 1. Register Account
-- Go to ?? Account page
-- Click "?? Register" tab
+- Go to  Account page
+- Click " Register" tab
 - Enter credentials
 - Check email for verification link
 
 ### 2. Create Organization
-- Go to ?? Organizations page
+- Go to  Organizations page
 - Enter organization name & description
 - You're automatically added as Admin
 
 ### 3. Create Workstation
 - Select organization
-- Go to "?? Workstations" tab
+- Go to " Workstations" tab
 - Enter workstation name
 - (Optional) Add RTSP camera URL
 
 ### 4. Run Detection
-- Go to ?? Detection page
+- Go to  Detection page
 - Select input mode (Image/Video/Webcam)
 - Configure detection parameters
 - View compliance results
 
 ### 5. View Analytics
-- Go to ?? Dashboard page
+- Go to  Dashboard page
 - Select date range
 - View metrics and trends
 - Export reports
 
 ---
 
-## ?? Configuration
+##  Configuration
 
 ### Environment Variables (.env)
 
@@ -375,14 +375,14 @@ APP_URL=http://localhost:8501
 
 | Class | Required | Status |
 |-------|----------|--------|
-| Helmet | ? Yes | Supported |
-| Vest | ? Yes | Supported |
-| Boots | ? Yes | Supported |
-| Gloves | ? No | Limited |
+| Helmet |  Yes | Supported |
+| Vest |  Yes | Supported |
+| Boots |  Yes | Supported |
+| Gloves |  No | Limited |
 
 ---
 
-## ?? Features in Detail
+##  Features in Detail
 
 ### Real-Time PPE Detection
 - Dual network detection (persons + PPE)
@@ -417,7 +417,7 @@ APP_URL=http://localhost:8501
 
 ---
 
-## ??? Architecture & Logic
+##  Architecture & Logic
 
 ### Application Layers
 1. **UI Layer**: Streamlit 12-page application
@@ -427,14 +427,14 @@ APP_URL=http://localhost:8501
 
 ### Detection Pipeline
 ```
-Input ? Preprocessing ? Person Detection ? PPE Detection 
-? PPE-Person Assignment ? Compliance Classification 
-? Visualization ? Database Storage
+Input  Preprocessing  Person Detection  PPE Detection 
+ PPE-Person Assignment  Compliance Classification 
+ Visualization  Database Storage
 ```
 
 ---
 
-## ??? Database Schema
+##  Database Schema
 
 **Core Tables:**
 - Users: User accounts with authentication
@@ -448,17 +448,17 @@ All tables include proper timestamps and foreign keys.
 
 ---
 
-## ?? Security Implementation
+##  Security Implementation
 
 - **Passwords**: bcrypt with 12 salt rounds
 - **Tokens**: 32-byte cryptographic randomness
-- **2FA**: RFC 6238 TOTP with ±1 time step
+- **2FA**: RFC 6238 TOTP with Â±1 time step
 - **SQL**: SQLAlchemy ORM prevents injection
 - **Database**: ACID compliance, connection pooling
 
 ---
 
-## ? Performance Optimization
+##  Performance Optimization
 
 - Image resizing to 640x640
 - Configurable frame skipping
@@ -469,7 +469,7 @@ All tables include proper timestamps and foreign keys.
 
 ---
 
-## ?? Troubleshooting
+##  Troubleshooting
 
 ### Circular Import Error
 - Use lazy imports for analytics module
@@ -497,7 +497,7 @@ All tables include proper timestamps and foreign keys.
 
 ---
 
-## ?? Contributing
+##  Contributing
 
 ### Setup
 ```bash
@@ -519,7 +519,7 @@ git checkout -b feature/your-feature
 
 ---
 
-## ?? License
+##  License
 
 MIT License - see LICENSE file for details.
 
@@ -527,7 +527,7 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Support
+##  Support
 
 - **Docs**: See sections above
 - **Issues**: GitHub Issues
@@ -535,7 +535,7 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Statistics
+##  Statistics
 
 - Lines of Code: 5,000+
 - Database Tables: 8
@@ -545,7 +545,7 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Version History
+##  Version History
 
 - **v2.0.0** (Current): Phases 1-4 complete
 - **v1.5.0**: Phase 2 authentication
@@ -553,7 +553,7 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Acknowledgments
+##  Acknowledgments
 
 - YOLOv11: Ultralytics
 - Streamlit: UI Framework
@@ -562,7 +562,7 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Contact
+##  Contact
 
 **Author**: [Your Name]  
 **Email**: [your-email@example.com]  
@@ -576,12 +576,12 @@ For commercial use: [your-email@example.com]
 
 ---
 
-## ?? Get Started!
+##  Get Started!
 
 ```bash
 streamlit run app.py
 ```
 
-**Happy detecting! ???**
+**Happy detecting! **
 
 
